@@ -1,6 +1,7 @@
 import express from "express";
 
 const app = express();
+app.use(express.json());
 
 app.use((req,res,next)=>{
     console.log("Middleware executed");
@@ -16,6 +17,7 @@ app.get("/about", (req,res)=>{
 });
 
 app.post("/login", (req,res)=>{
+    console.log(req.body);
     res.send("Login Successful");
 });
 
