@@ -1,4 +1,5 @@
 import express from "express";
+import { loginUser } from "../controllers/user.controllers";
 
 const app = express();
 app.use(express.json());
@@ -16,10 +17,7 @@ app.get("/about", (req,res)=>{
     res.send("About SmartTask");
 });
 
-app.post("/login", (req,res)=>{
-    console.log(req.body);
-    res.send("Login Successful");
-});
+app.post("/login", loginUser);
 
 app.get("/random", (req,res)=>{
     res.send("Random Page for Task")
