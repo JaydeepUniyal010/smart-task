@@ -1,11 +1,11 @@
 import express from "express";
 import { loginUser } from "../controllers/user.controllers.js";
-import {userRouter} from "../routes/user.routes.js"
+import userRouter from "../routes/user.routes.js"
 
 const app = express();
 app.use(express.json());
 
-app.use(userRouter);
+app.use("/api/v1/users", userRouter);
 
 app.use((req,res,next)=>{
     console.log("Middleware executed");
@@ -27,3 +27,6 @@ app.get("/random", (req,res)=>{
 })
 
 export default app;
+
+
+// node src/server.js
