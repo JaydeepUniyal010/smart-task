@@ -1,3 +1,5 @@
+import User from "../models/user.model.js";
+
 export const loginUser = (req,res) =>{
     res.send("Login from Controller");
 };
@@ -5,7 +7,12 @@ export const loginUser = (req,res) =>{
 
 
 
-
+// await User.create({
+//     name,
+//     email,
+//     phone,
+//     password
+// });
 
 // Controller ka kaam:
 
