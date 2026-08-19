@@ -1,8 +1,11 @@
 import User from "../models/user.model.js";
 
-export const loginUser = (req,res) =>{
-    res.send("Login from Controller");
+const registerUser = async (req, res) =>{
+ const {name, email, phone, password} = req.body;
+ console.log(name, email, phone, password);
 };
+
+export { registerUser};
 
 
 
