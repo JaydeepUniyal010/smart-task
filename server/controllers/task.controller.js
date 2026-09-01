@@ -159,3 +159,19 @@ export {
   updateTask,
   deleteTask,
 };
+
+
+
+
+
+//   //Create a new task
+// const createTask = async (req, res) => {
+//   try {
+//     const { title, description, status, priority, dueDate } = req.body;
+
+//     if (!title?.trim()) {
+//       return res.status(400).json({
+//         success: false,
+//         message: "Task title is required",
+//       });
+  //  }
